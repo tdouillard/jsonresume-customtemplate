@@ -1,14 +1,33 @@
 {
-  "name": "jsonresume-theme-boilerplate",
-  "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
-  "author": "Mattias Erming",
+  "name": "jsonresume-theme-nuxt-boilerplate",
+  "version": "0.1.0",
+  "description": "Lightweight Nuxt.js TypeScript theme for JSON Resume",
+  "author": "tdouillard",
   "repository": {
     "type": "git",
     "url": "https://github.com/erming/jsonresume-theme-boilerplate"
   },
   "license": "MIT",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^20.10.0",
+    "@nuxt/config":"^2.18.1",
+    "nuxt": "^3.8.0",
+    "vue-tsc": "^2.2.10",
+    "typescript": "^5.3.0"
+  },
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^4.7.8",
+    "h3": "^1.8.0"
   }
 }

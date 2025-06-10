@@ -1,0 +1,1 @@
+export { default } from "file:///home/tdouillard/tdouillard/Documents/projects/open-cv/jsonresume-customtemplate/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
