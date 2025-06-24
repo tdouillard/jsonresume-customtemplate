@@ -1,6 +1,7 @@
 # jsonresume-customtemplate
 
-![MIT License](https://img.shields.io/github/license/tdouillard/jsonresume-customtemplate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Coverage](./coverage/badges.svg) 
 
 A **custom template** for generating beautiful resumes in PDF or web format using the [JSON Resume](https://jsonresume.org/) standard.
 

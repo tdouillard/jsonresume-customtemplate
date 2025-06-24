@@ -1,0 +1,9 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "index.js",
+    "scripts/generate-pdf.js"
+  ],
+  "coverageReporters": ["lcov","json-summary"],
+  "testEnvironment": "node"
+}

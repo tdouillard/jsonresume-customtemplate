@@ -7,3 +7,13 @@ resume.json
 yarn.lock
 package-lock.json
 public/*.*
+# Ignore all Jest/coverage output:
+coverage/*
+
+# UN-IGNORE the badges folder inside coverage:
+!coverage/
+!coverage/badges*.svg
+
+# (Optional) If you want to only keep the summary badge (statements.svg):
+# coverage/badges/*
+# !coverage/badges/statements.svg

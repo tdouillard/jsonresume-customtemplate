@@ -3,6 +3,12 @@
   "version": "1.0.5",
   "description": "Custom json resume template",
   "author": "tdouillard",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/license/mit/"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tdouillard/jsonresume-customtemplate.git"
@@ -10,7 +16,9 @@
   "license": "MIT",
   "scripts": {
     "start": "resume serve --theme .",
-    "export": "resume export resume.pdf --theme ."
+    "export": "resume export resume.pdf --theme .",    
+    "coverage": "jest --coverage",
+    "make-badges": "coverage-badges"
   },
   "dependencies": {
     "address-format": "0.0.3",
@@ -19,5 +27,9 @@
     "handlebars-wax": "^6.1.0",
     "moment": "^2.29.4",
     "swag": "^0.7.0"
+  },
+  "devDependencies": {
+    "coverage-badges-cli": "^2.1.0",
+    "jest": "^29.0.0"
   }
 }
