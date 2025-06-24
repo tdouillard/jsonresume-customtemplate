@@ -1,0 +1,164 @@
+{
+  "basics": {
+    "name": "John Smith",
+    "picture": "../assets/profile_picture.png",
+    "title": "Software Developer",
+    "summary": "Passionate about software development in various industries, always eager for new challenges.",
+    "location": {
+      "locationCountryCode": "US",
+      "city": "San Francisco"
+    },
+    "profiles": [
+      {
+        "id": "profile-01",
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/johnsmith"
+      }
+    ],
+    "phone": "+1 555 123 4567",
+    "email": "john.smith@email.com"
+  },
+  "work": [
+    {
+      "name": "TechInnovate",
+      "position": "Backend Engineer",
+      "index": 0,
+      "startDate": "2022-03-01",
+      "summary": "Responsible for backend architecture on innovative healthcare projects.",
+      "location": "San Francisco, USA",
+      "placeId": "techinnovate-sf",
+      "id": "work-01"
+    },
+    {
+      "name": "Web Solutions",
+      "position": "Fullstack Developer",
+      "index": 1,
+      "startDate": "2019-05-01",
+      "endDate": "2022-02-15",
+      "summary": "Developed web solutions for European clients, managed cloud microservices.",
+      "location": "Chicago, USA",
+      "placeId": "websolutions-chicago",
+      "id": "work-02"
+    },
+    {
+      "name": "Mobility Corp",
+      "position": "Mobile Developer",
+      "index": 2,
+      "startDate": "2017-01-10",
+      "endDate": "2019-04-30",
+      "summary": "Created and maintained Android and iOS apps for the transportation sector.",
+      "location": "Austin, USA",
+      "placeId": "mobilitycorp-austin",
+      "id": "work-03"
+    }
+  ],
+  "education": [
+    {
+      "id": "education-01",
+      "institution": "University of Chicago",
+      "index": 0,
+      "studyType": "Master's in Computer Science",
+      "endDate": "2016-06-30"
+    },
+    {
+      "id": "education-02",
+      "institution": "Austin Community College",
+      "index": 1,
+      "studyType": "Associate Degree in IT",
+      "endDate": "2014-06-15"
+    }
+  ],
+  "skills": [
+    { "id": "skill-01", "name": "JavaScript", "category": "Programming", "value": 80 },
+    { "id": "skill-02", "name": "Node.js", "category": "Backend", "value": 75 },
+    { "id": "skill-03", "name": "React", "category": "Frontend", "value": 70 },
+    { "id": "skill-04", "name": "TypeScript", "category": "Programming", "value": 65 },
+    { "id": "skill-05", "name": "Docker", "category": "Ops", "value": 60 },
+    { "id": "skill-06", "name": "Kubernetes", "category": "Ops", "value": 55 }
+  ],
+  "languages": [
+    {
+      "id": "lang-01",
+      "name": "English",
+      "position": 0,
+      "value": 100,
+      "language": "English"
+    },
+    {
+      "id": "lang-02",
+      "name": "French",
+      "position": 1,
+      "value": 85,
+      "language": "French"
+    }
+  ],
+  "interests": [
+    {
+      "gifUrl": "https://example.com/gif-basketball.gif",
+      "gifUser": {
+        "isVerified": true,
+        "name": "NBA",
+        "profileAvatarUrl": "https://example.com/nba-avatar.jpg",
+        "profileUrl": "https://giphy.com/nba/"
+      },
+      "id": "interest-01",
+      "index": 0,
+      "name": "Basketball"
+    },
+    {
+      "gifUrl": "https://example.com/gif-cinema.gif",
+      "id": "interest-02",
+      "index": 1,
+      "name": "Cinema"
+    }
+  ],
+  "projects": [],
+  "specific": {
+    "basics": {
+      "visaSponsorship": false,
+      "personalDescription": "Open to international opportunities, quick to adapt.",
+      "globalJobTitle": "Lead Developer"
+    },
+    "dreamJob": {
+      "locations": [
+        {
+          "id": "dreamjob-location-01",
+          "index": 0,
+          "placeId": "chicago-us",
+          "name": "Chicago, USA"
+        },
+        {
+          "id": "dreamjob-location-02",
+          "index": 1,
+          "placeId": "copenhagen-dk",
+          "name": "Copenhagen, Denmark"
+        }
+      ],
+      "perks": {
+        "challenge": true,
+        "mood": true,
+        "other": "Collaborative team and innovative products",
+        "salary": true
+      },
+      "remoteFrequency": {
+        "daysPerWeek": 3,
+        "frequency": "hybrid"
+      }
+    },
+    "currentJob": {},
+    "education": {
+      "studiesLevel": 5
+    },
+    "work": {
+      "contractTypes": [
+        "Full-time"
+      ],
+      "codingYears": 7,
+      "searchState": "Actively looking",
+      "otherExperienceYears": 1,
+      "codeExperienceYears": 7
+    },
+    "sound": {},
+    "interestedBy": "DevOps, Cloud, AI, Web3, Svelte"
+  }
+}

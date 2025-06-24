@@ -1,10 +1,8 @@
 <!doctype html>
 <html>
-	<head>
-	
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
 
 	<style>
@@ -13,17 +11,13 @@
 	
 	</head>
 	<body>
-	
-	<div id="resume">
-		{{> basics }}
-		{{> work }}
-		{{> volunteer }}
-		{{> education }}
-		{{> awards }}
-		{{> publications }}
-		{{> skills }}
-		{{> languages }}
-		{{> interests }}
-		{{> references }}
+	  	<!-- BUTTON only visible on screen -->
+		<button id="export-pdf" class="no-print" style="position:fixed;top:10px;right:10px;z-index:1000;">
+		Export as PDF
+		</button>
+		<div id="resume">
+			{{> full }}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  		<script src="/export-pdf.js"></script>
 	</body>
 </html>
