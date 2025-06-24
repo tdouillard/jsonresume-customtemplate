@@ -1,14 +1,24 @@
 {
-  "name": "jsonresume-theme-boilerplate",
-  "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
-  "author": "Mattias Erming",
+  "name": "jsonresume-customtemplate",
+  "version": "1.0.5",
+  "description": "Custom json resume template",
+  "author": "tdouillard",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
+    "url": "git+https://github.com/tdouillard/jsonresume-customtemplate.git"
   },
   "license": "MIT",
+  "scripts": {
+    "start": "resume serve --theme .",
+    "export": "resume export resume.pdf --theme ."
+  },
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "address-format": "0.0.3",
+    "express": "^5.1.0",
+    "handlebars": "^4.7.7",
+    "handlebars-wax": "^6.1.0",
+    "moment": "^2.29.4",
+    "resume-cli": "^3.0.8",
+    "swag": "^0.7.0"
   }
 }

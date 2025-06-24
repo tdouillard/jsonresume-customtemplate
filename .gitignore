@@ -4,3 +4,6 @@ resume.html
 resume.pdf
 resume.json
 .DS_Store
+public
+yarn.lock
+package-lock.json

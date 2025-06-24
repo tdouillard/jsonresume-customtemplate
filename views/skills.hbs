@@ -1,0 +1,27 @@
+<section id="skills">
+  <div class="skills-section-columns">
+    <!-- Langages/Frameworks -->
+    <div class="skills-category">
+      <h3>Langages/Frameworks</h3>
+      <div class="skills-list">
+        {{#each resume.skills}}
+          {{#if (eq category "languages")}}
+            <div class="skill-item">{{name}}</div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+
+    <!-- Outils -->
+    <div class="skills-category">
+      <h3>Outils</h3>
+      <div class="skills-list">
+        {{#each resume.skills}}
+          {{#if (eq category "tools")}}
+            <div class="skill-item">{{name}}</div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
