@@ -8,20 +8,36 @@ const
 
 Swag.registerHelpers(handlebars);
 
-handlebars.registerHelper({
+const Handlebars = require('handlebars');
+
+// Helper: parse bullets (•) and format lines with <br>
+const parseBullets = (context) => {
+  if (!context || typeof context !== "string") return context;
+  const formatedText = context
+    .split('•')
+    .filter(line => line.trim() !== '')
+    .map((line, index) => { 
+      let formatedLine = line.trim(); 
+      formatedLine = index > 0 ? '• ' + formatedLine : formatedLine; 
+      return formatedLine 
+    })
+    .join('<br>');
+  return new Handlebars.SafeString(formatedText);
+};
+
+// Register helpers
+Handlebars.registerHelper({
   removeProtocol: function (url) {
     return url.replace(/.*?:\/\//g, '');
   },
 
   concat: function () {
     let res = '';
-
     for (let arg in arguments) {
       if (typeof arguments[arg] !== 'object') {
         res += arguments[arg];
       }
     }
-
     return res;
   },
 
@@ -33,91 +49,71 @@ handlebars.registerHelper({
       postalCode: postalCode,
       countryCode: countryCode
     });
-
-
     return addressList.join('<br/>');
   },
 
   formatDate: function (date) {
-    return moment(date).format('MMM YYYY');
+    // Using moment if available, fallback to Date
+    if (typeof moment !== 'undefined' && moment(date).isValid()) {
+      return moment(date).format('MMM YYYY');
+    }
+    if (!date) return '';
+    var options = { year: 'numeric', month: 'short' };
+    var d = new Date(date);
+    return d.toLocaleDateString('fr-FR', options);
+  },
+
+  splitFirstName: function (name) {
+    if (!name) return '';
+    var n = name.split(' ');
+    return n.slice(0, 1).join(' ');
+  },
+
+  splitLastName: function (name) {
+    if (!name) return '';
+    var n = name.split(' ');
+    return n.length > 1 ? n.slice(1).join(' ') : '';
+  },
+
+  formatYear: function (dateString) {
+    if (!dateString) return '';
+    var d = new Date(dateString);
+    return d.getFullYear();
+  },
+
+  pre: function (text) {
+    var escaped = Handlebars.Utils.escapeExpression(text || "");
+    const safeStringObj = new Handlebars.SafeString(escaped.replace(/\n/g, '<br>'));
+    const formated = parseBullets(safeStringObj.string);
+    return formated;
+  },
+
+  eq: function (a, b) {
+    return a === b ? '1' : null;
+  },
+
+  langFormat: function (value) {
+    if (value == 100) {
+      return 'Native';
+    } else if (value >= 90) {
+      return 'Bilingual';
+    } else if (value >= 75) {
+      return 'B2';
+    } else {
+      return '';
+    }
   }
 });
-
-handlebars.registerHelper('splitFirstName', function (name) {
-  if (!name) return '';
-  var n = name.split(' ');
-  return n.slice(0, 1).join(' ');
-});
-handlebars.registerHelper('splitLastName', function (name) {
-  if (!name) return '';
-  var n = name.split(' ');
-  return n.length > 1 ? n.slice(1).join(' ') : '';
-});
-handlebars.registerHelper('formatDate', function (dateString) {
-  if (!dateString) return '';
-  var options = { year: 'numeric', month: 'short' };
-  var d = new Date(dateString);
-  return d.toLocaleDateString('fr-FR', options);
-});
-handlebars.registerHelper('formatYear', function (dateString) {
-  if (!dateString) return '';
-  var d = new Date(dateString);
-  return d.getFullYear();
-});
-
-const Handlebars = require('handlebars');
-
-const parseBullets = (context) => {
-  // Split at each bullet (•), keep content, filter any empty lines
-  if (!context || typeof context !== "string") return context;
-  const formatedText = context
-    .split('•')
-    .filter(line => line.trim() !== '')
-    .map((line, index) => { let formatedLine = line.trim(); formatedLine = index > 0 ? '• ' + formatedLine : formatedLine; return formatedLine })
-    .join('<br>');
-  return new handlebars.SafeString(formatedText);
-}
-
-handlebars.registerHelper('pre', function (text) {
-  var escaped = handlebars.Utils.escapeExpression(text || "");
-  const safeStringObj = new handlebars.SafeString(escaped.replace(/\n/g, '<br>'));
-  const formated = parseBullets(safeStringObj.string);
-  return formated;
-});
-
-Handlebars.registerHelper('eq', function (a, b) {
-  return a === b ? '1' : null;
-});
-handlebars.registerHelper('langFormat', function (value) {
-  if (value == 100) {
-    return 'Maternelle';
-  } else if (value >= 90) {
-    return 'Bilingue';
-  } else if (value >= 75) {
-    return 'B2';
-  } else {
-    return ''; // or 'basique', etc.
-  }
-});
-
-
-
 
 
 function render(resume) {
-  let dir = __dirname,
-    css = fs.readFileSync(dir + '/style.css', 'utf-8'),
-    resumeTemplate = fs.readFileSync(dir + '/resume.hbs', 'utf-8');
-
-  let Handlebars = handlebarsWax(handlebars);
-
-  Handlebars.partials(dir + '/views/**/*.{hbs,js}');
-  Handlebars.partials(dir + '/partials/**/*.{hbs,js}');
-
-  return Handlebars.compile(resumeTemplate)({
-    css: css,
-    resume: resume
-  });
+  const dir = __dirname;
+  const css = fs.readFileSync(`${dir}/style.css`, 'utf-8'),
+    resumeTemplate = fs.readFileSync(`${dir}/resume.hbs`, 'utf-8'),
+    HandlebarsInstance = handlebarsWax(handlebars);
+  HandlebarsInstance.partials(`${dir}/views/**/*.{hbs,js}`);
+  HandlebarsInstance.partials(`${dir}/partials/**/*.{hbs,js}`);
+  return HandlebarsInstance.compile(resumeTemplate)({ css, resume });
 }
 
 module.exports = {

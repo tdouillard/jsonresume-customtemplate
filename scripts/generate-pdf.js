@@ -5,6 +5,7 @@ const process = require("process");
 async function buildPdf() {
     const app = express();
     app.use(express.static("./public"));
+    const pdfpath = process.env.PDF_PATH || "./resume.pdf"
     let listener = app.listen(0, "127.0.0.1", async () => {
         const browser = await pptr.launch();
         const page = await browser.newPage();
@@ -19,7 +20,7 @@ async function buildPdf() {
             printBackground: true,
         });
         await browser.close();
-        console.log("generated pdf");
+        console.info(`Pdf generated successfully at ${pdfpath}`);
         listener.close();
     });
 }

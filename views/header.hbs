@@ -1,13 +1,13 @@
 <section id="header">
     <div class="header-bg">
         <div class="header-content">
-            <div>
+            <div class="header-text">
                 <h1>
                     <span class="first-name">{{splitFirstName resume.basics.name}}</span>
                     <br>
                     <span class="last-name">{{splitLastName resume.basics.name}}</span>
                 </h1>
-                <div class="subtitle">{{resume.basics.label}}</div>
+                <div class="subtitle">{{resume.basics.title}}</div>
             </div>
             {{#if resume.basics.picture}}
             <img class="profile-pic" src="{{resume.basics.picture}}" alt="profile picture">
