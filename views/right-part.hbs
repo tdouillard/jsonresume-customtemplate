@@ -1,21 +1,26 @@
 <section id="right-part">
-    <!-- RIGHT SIDE (MAIN) -->
-    <div class="resume-right">
-        <div class="section">
-            <h2>Expériences</h2>
-            {{#each resume.work}}
-            <div class="job">
-                <strong>{{position}}</strong> - <span class="org">{{name}}</span>
-                <span class="date">
-                    {{#if endDate}}
-                    ({{formatDate startDate}} – {{formatDate endDate}})
-                    {{else}}
-                    ({{formatDate startDate}} – Présent)
-                    {{/if}}
-                </span>
-                <div class="details">{{pre summary}}</div>
-            </div>
-            {{/each}}
+  <!-- RIGHT SIDE (MAIN) -->
+  <div class="resume-right">
+    <div class="section">
+      <h2>{{resume.work.name}}</h2>
+      {{#each resume.work.list}}
+        <div class="job">
+          <strong>{{position}}</strong>
+          -
+          <span class="org">{{name}}</span>
+          <span class="date">
+            {{#if endDate}}
+              ({{formatDate startDate}}
+              –
+              {{formatDate endDate}})
+            {{else}}
+              ({{formatDate startDate}}
+              – Présent)
+            {{/if}}
+          </span>
+          <div class="details">{{pre summary}}</div>
         </div>
+      {{/each}}
     </div>
+  </div>
 </section>

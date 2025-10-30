@@ -1,164 +1,184 @@
 {
   "basics": {
-    "name": "John Smith",
-    "picture": "../assets/profile_picture.png",
-    "title": "Software Developer",
-    "summary": "Passionate about software development in various industries, always eager for new challenges.",
-    "location": {
-      "locationCountryCode": "US",
-      "city": "San Francisco"
-    },
-    "profiles": [
-      {
-        "id": "profile-01",
-        "network": "LinkedIn",
-        "url": "https://www.linkedin.com/in/johnsmith"
-      }
-    ],
-    "phone": "+1 555 123 4567",
-    "email": "john.smith@email.com"
-  },
-  "work": [
-    {
-      "name": "TechInnovate",
-      "position": "Backend Engineer",
-      "index": 0,
-      "startDate": "2022-03-01",
-      "summary": "Responsible for backend architecture on innovative healthcare projects.",
-      "location": "San Francisco, USA",
-      "placeId": "techinnovate-sf",
-      "id": "work-01"
-    },
-    {
-      "name": "Web Solutions",
-      "position": "Fullstack Developer",
-      "index": 1,
-      "startDate": "2019-05-01",
-      "endDate": "2022-02-15",
-      "summary": "Developed web solutions for European clients, managed cloud microservices.",
-      "location": "Chicago, USA",
-      "placeId": "websolutions-chicago",
-      "id": "work-02"
-    },
-    {
-      "name": "Mobility Corp",
-      "position": "Mobile Developer",
-      "index": 2,
-      "startDate": "2017-01-10",
-      "endDate": "2019-04-30",
-      "summary": "Created and maintained Android and iOS apps for the transportation sector.",
-      "location": "Austin, USA",
-      "placeId": "mobilitycorp-austin",
-      "id": "work-03"
-    }
-  ],
-  "education": [
-    {
-      "id": "education-01",
-      "institution": "University of Chicago",
-      "index": 0,
-      "studyType": "Master's in Computer Science",
-      "endDate": "2016-06-30"
-    },
-    {
-      "id": "education-02",
-      "institution": "Austin Community College",
-      "index": 1,
-      "studyType": "Associate Degree in IT",
-      "endDate": "2014-06-15"
-    }
-  ],
-  "skills": [
-    { "id": "skill-01", "name": "JavaScript", "category": "Programming", "value": 80 },
-    { "id": "skill-02", "name": "Node.js", "category": "Backend", "value": 75 },
-    { "id": "skill-03", "name": "React", "category": "Frontend", "value": 70 },
-    { "id": "skill-04", "name": "TypeScript", "category": "Programming", "value": 65 },
-    { "id": "skill-05", "name": "Docker", "category": "Ops", "value": 60 },
-    { "id": "skill-06", "name": "Kubernetes", "category": "Ops", "value": 55 }
-  ],
-  "languages": [
-    {
-      "id": "lang-01",
-      "name": "English",
-      "position": 0,
-      "value": 100,
-      "language": "English"
-    },
-    {
-      "id": "lang-02",
-      "name": "French",
-      "position": 1,
-      "value": 85,
-      "language": "French"
-    }
-  ],
-  "interests": [
-    {
-      "gifUrl": "https://example.com/gif-basketball.gif",
-      "gifUser": {
-        "isVerified": true,
-        "name": "NBA",
-        "profileAvatarUrl": "https://example.com/nba-avatar.jpg",
-        "profileUrl": "https://giphy.com/nba/"
+    "name": "John Doe",
+    "picture": "assets/profile_picture.jpg",
+    "title": "",
+    "summary": "A brief summary of your professional background and key strengths.",
+    "contact": {
+      "name": "Contact",
+      "location": {
+        "locationCountryCode": "US",
+        "city": "New York"
       },
-      "id": "interest-01",
-      "index": 0,
-      "name": "Basketball"
-    },
-    {
-      "gifUrl": "https://example.com/gif-cinema.gif",
-      "id": "interest-02",
-      "index": 1,
-      "name": "Cinema"
+      "profiles": [
+        {
+          "id": "profile-01",
+          "network": "LinkedIn",
+          "url": "https://www.linkedin.com/in/example"
+        }
+      ],
+      "phone": "+1 (555) 000-0000",
+      "email": "john.doe@example.com"
     }
-  ],
+  },
+  "work": {
+    "name": "Experience",
+    "list": [
+      {
+        "id": "work-01",
+        "index": 0,
+        "name": "Tech Company Inc.",
+        "position": "Senior Software Engineer",
+        "startDate": "2022-01-15",
+        "endDate": "2024-12-31",
+        "location": "Remote",
+        "summary": "Led development of scalable cloud-based applications. • Backend: Built APIs using Node.js and Express • Frontend: Developed responsive interfaces with React • Infrastructure: Managed deployments on AWS with Docker • Team: Mentored junior developers and led code reviews"
+      },
+      {
+        "id": "work-02",
+        "index": 1,
+        "name": "Digital Solutions Ltd.",
+        "position": "Full Stack Developer",
+        "startDate": "2020-06-01",
+        "endDate": "2022-01-14",
+        "location": "Hybrid",
+        "summary": "Developed and maintained multiple web applications for enterprise clients. • Created RESTful APIs with Python and Flask • Built frontend dashboards using Vue.js • Implemented automated testing and CI/CD pipelines • Collaborated with cross-functional teams in Agile environment"
+      },
+      {
+        "id": "work-03",
+        "index": 2,
+        "name": "StartUp Ventures",
+        "position": "Junior Developer",
+        "startDate": "2019-03-01",
+        "endDate": "2020-05-31",
+        "location": "On-site",
+        "summary": "Developed features for a mobile application connecting service providers and customers. • Built mobile app components using React Native • Integrated third-party APIs and payment systems • Participated in daily standups and sprint planning • Improved app performance and fixed bugs reported by users"
+      },
+      {
+        "id": "work-04",
+        "index": 3,
+        "name": "Consulting Group",
+        "position": "Associate Developer",
+        "startDate": "2018-07-01",
+        "endDate": "2019-02-28",
+        "location": "On-site",
+        "summary": "Worked on internal tools and client-facing web applications. • Developed web interfaces for data visualization • Maintained legacy applications and performed bug fixes • Documented code and created technical specifications for new features"
+      }
+    ]
+  },
+  "training": {
+    "name": "Education",
+    "list": [
+      {
+        "id": "education-01",
+        "index": 0,
+        "institution": "University of Technology",
+        "studyType": "Master's in Computer Science",
+        "endDate": "2018"
+      },
+      {
+        "id": "education-02",
+        "index": 1,
+        "institution": "State University",
+        "studyType": "Bachelor of Science in Information Technology",
+        "endDate": "2016"
+      }
+    ]
+  },
+  "skills": {
+    "name": "Skills",
+    "list": [
+      {
+        "category": "languages/frameworks",
+        "list": [
+          {
+            "id": "skill-01",
+            "name": "JavaScript",
+            "value": 90
+          },
+          {
+            "id": "skill-02",
+            "name": "React",
+            "value": 85
+          }
+        ]
+      },
+      {
+        "category": "Tools",
+        "list": [
+          {
+            "id": "skill-05",
+            "name": "AWS",
+            "value": 75
+          },
+          {
+            "id": "skill-06",
+            "name": "Git",
+            "value": 88
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "name": "Languages",
+    "list": [
+      {
+        "id": "lang-01",
+        "position": 0,
+        "name": "English",
+        "language": "English",
+        "value": 100
+      },
+      {
+        "id": "lang-02",
+        "position": 1,
+        "name": "Spanish",
+        "language": "Spanish",
+        "value": 70
+      }
+    ]
+  },
+  "interests": {
+    "name": "Interests",
+    "list": [
+      {
+        "id": "interest-01",
+        "index": 0,
+        "name": "Open Source Development",
+        "gifUrl": "",
+        "gifUser": {}
+      },
+      {
+        "id": "interest-02",
+        "index": 1,
+        "name": "Cloud Architecture",
+        "gifUrl": ""
+      }
+    ]
+  },
   "projects": [],
   "specific": {
     "basics": {
       "visaSponsorship": false,
-      "personalDescription": "Open to international opportunities, quick to adapt.",
-      "globalJobTitle": "Lead Developer"
+      "personalDescription": "",
+      "globalJobTitle": "Developer"
     },
     "dreamJob": {
-      "locations": [
-        {
-          "id": "dreamjob-location-01",
-          "index": 0,
-          "placeId": "chicago-us",
-          "name": "Chicago, USA"
-        },
-        {
-          "id": "dreamjob-location-02",
-          "index": 1,
-          "placeId": "copenhagen-dk",
-          "name": "Copenhagen, Denmark"
-        }
-      ],
-      "perks": {
-        "challenge": true,
-        "mood": true,
-        "other": "Collaborative team and innovative products",
-        "salary": true
-      },
-      "remoteFrequency": {
-        "daysPerWeek": 3,
-        "frequency": "hybrid"
-      }
+      "locations": [],
+      "perks": {},
+      "remoteFrequency": {}
     },
     "currentJob": {},
-    "education": {
-      "studiesLevel": 5
-    },
+    "education": {},
     "work": {
-      "contractTypes": [
-        "Full-time"
-      ],
-      "codingYears": 7,
-      "searchState": "Actively looking",
-      "otherExperienceYears": 1,
-      "codeExperienceYears": 7
+      "contractTypes": [],
+      "codingYears": 6,
+      "searchState": "",
+      "otherExperienceYears": 0,
+      "codeExperienceYears": 6
     },
     "sound": {},
-    "interestedBy": "DevOps, Cloud, AI, Web3, Svelte"
+    "interestedBy": ""
   }
 }
